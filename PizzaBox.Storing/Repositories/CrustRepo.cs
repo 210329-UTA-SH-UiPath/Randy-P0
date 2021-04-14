@@ -6,20 +6,19 @@ using PizzaBox.Storing.Mappers;
 namespace PizzaBox.Storing.Repositories
 {
 
-    public class Sizerepository : IRepository<Size>
+    public class Crustrepository : IRepository<Crust>
     {
         public void Add(Crust genericType)
         {
             throw new System.NotImplementedException();
         }
 
-        public System.Collections.Generic.List<Size> GetList()
+        public System.Collections.Generic.List<Crust> GetList()
         {
             PizzaboxDBContext Context = new PizzaboxDBContext();
             CrustMapper Mapper = new CrustMapper();
 
-            return Context.PizzaSizes.Selecht(Mapper.Map).ToList();
-
+            return Context.PizzaCrusts.Select(Mapper.Map).ToList();
         }
 
         public void Remove(Crust genericType)

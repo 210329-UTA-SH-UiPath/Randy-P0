@@ -6,28 +6,28 @@ using PizzaBox.Storing.Mappers;
 namespace PizzaBox.Storing.Repositories
 {
 
-    public class Sizerepository : IRepository<Size>
+    public class Toppingrepository : IRepository<Topping>
     {
-        public void Add(Size genericType)
+        public void Add(Topping genericType)
         {
             throw new System.NotImplementedException();
         }
 
-        public System.Collections.Generic.List<Size> GetList()
+        public System.Collections.Generic.List<Topping> GetList()
         {
             PizzaboxDBContext Context = new PizzaboxDBContext();
-            SizeMapper Mapper = new SizeMapper();
+            ToppingMapper Mapper = new ToppingMapper();
 
-            return Context.PizzaSizes.Select(Mapper.Map).ToList();
+            return Context.PizzaToppings.Select(Mapper.Map).ToList();
 
         }
 
-        public void Remove(Size genericType)
+        public void Remove(Topping genericType)
         {
             throw new System.NotImplementedException();
         }
 
-        public void update(Size existingType, Size updatedType)
+        public void update(Topping existingType, Topping updatedType)
         {
             throw new System.NotImplementedException();
         }

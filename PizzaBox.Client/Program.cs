@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using PizzaBox.Domain.Model;
 using PizzaBox.Storing.Repositories;
-//using Microsoft.EntityFrameworkCore;
 
 
 namespace PizzaBox.Client
@@ -35,7 +34,6 @@ namespace PizzaBox.Client
         private static void DisplayPizzaMenu()
         {
             var index = 0;
-            foreach (var item in _pizzaSingleton.Pizz)
             {
                 Console.WriteLine($"{++index} - {item}");
             }
@@ -44,7 +42,6 @@ namespace PizzaBox.Client
         {
             var index = 0;
 
-            foreach (var item in _storeSingleton.Stores)
             {
                 Console.WriteLine($"{++index} - {item}");
             }
@@ -53,7 +50,6 @@ namespace PizzaBox.Client
         private static Build SelectPizza()
         {
             var input = int.Parse(Console.ReadLine());
-            var pizza = _pizzaSingleton.Pizzas[input - 1];
 
             DisplayOrder(pizza);
 

@@ -4,7 +4,7 @@ using PizzaBox.Storing.Entities;
 
 namespace PizzaBox.Storing.Mappers
 {
-    public class TopppingMapper
+    public class ToppingMapper
     {
         public Topping Map(PizzaTopping topping)
         {
@@ -13,7 +13,7 @@ namespace PizzaBox.Storing.Mappers
                 Id = topping.Id,
                 Toppings = topping.Toppings,
                 Price = topping.Price
-                //  PizzaToppings = topping.PizzaToppings.Select(x => Map(x)).ToList()
+                // PizzaToppings = topping.PizzaToppings.Select(x => Map(x)).ToList()
             };
         }
 
